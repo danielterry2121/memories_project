@@ -1,6 +1,6 @@
 import express from 'express';
-
-import { getPosts,createPost,updatePost } from '../controllers/posts.js';
+//Step one 
+import { getPosts,createPost,updatePost, deletePost, likePost } from '../controllers/posts.js';
 
 const router = express.Router();
 //keeping all of the functionality of our post clean and importing the functionality from controllers
@@ -10,6 +10,9 @@ router.get('/', getPosts );
 //Create
 router.post('/', createPost );
 //Update
-router.patch('/:id', updatePost)
-
+router.patch('/:id', updatePost);
+//Delete
+router.delete('/:id', deletePost);
+//like functionality
+router.patch('/:id/likePost', likePost);
 export default router;
