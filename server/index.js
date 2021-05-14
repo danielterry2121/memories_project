@@ -12,7 +12,7 @@ app.use(express.urlencoded({limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use('/posts', postRoutes);
-app.use('./user', userRoutes);
+app.use('/user', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 //urlparser and unified are not being used, just preventing errors in the console log.

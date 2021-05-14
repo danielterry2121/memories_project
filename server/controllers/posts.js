@@ -20,8 +20,8 @@ export const getPosts = async (req,res) => {
 //Create
 export const createPost = async (req,res) => {
     const post = req.body;
-
-    const newPost = new PostMessage(post);
+    //restructure the post and set the creator of that post equal to the user ID and add a created at function
+    const newPost = new PostMessage({...post, creator: req.userId, createdAt: new Date().toISOString()});
 
     try {
         await newPost.save();
@@ -50,7 +50,7 @@ export const updatePost = async (req,res) => {
 
 export const deletePost = async (req,res) => {
     const { id } = req.params;
-    const post = req.body;
+    
     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No post with that id');
 
     await PostMessage.findByIdAndRemove(id);
@@ -79,5 +79,5 @@ export const likePost = async (req,res) => {
     }
     const updatedPost = await PostMessage.findByIdAndUpdate(id, post, {new: true });
 
-    res.json(updatedPost);
+    res.status(200).json(updatedPost);
 }

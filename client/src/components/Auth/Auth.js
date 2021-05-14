@@ -39,7 +39,7 @@ const Auth = () => {
 
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);
-        handleShowPassword(false)
+        setShowPassword(false)
     }
     const googleSuccess = async (res) => {
         // ?. is a special operator that will not throw an error if it doesn't exist!
