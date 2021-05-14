@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import postRoutes from './routes/posts.js'
-
+import userRoutes from './routes/users.js'
 
 const app = express();
 dotenv.config();
@@ -12,10 +12,7 @@ app.use(express.urlencoded({limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use('/posts', postRoutes);
-//sending something  
-app.get('/', (req, res) => {
-    res.send('Hello wto memories API');
-});
+app.use('./user', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 //urlparser and unified are not being used, just preventing errors in the console log.
