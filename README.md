@@ -39,7 +39,7 @@ Creating ReadMe's for your Github repository can be tedious.  I hope this templa
 #### API Reference
 
 ```html
-    <h3>Must create own atlas key to run locally on machine.</h3>
+>Must create own atlas key to run locally on machine.
 ```
 [Back To The Top](#memories_project)
 
