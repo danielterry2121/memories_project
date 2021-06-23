@@ -1,6 +1,6 @@
 # memories_project
 
-![Project Image](![image](https://user-images.githubusercontent.com/64623822/123015611-c3e43480-d396-11eb-995a-3c7a48786eef.png))
+![Project Image](https://user-images.githubusercontent.com/64623822/123015611-c3e43480-d396-11eb-995a-3c7a48786eef.png)
 
 
 ### Table of Contents
@@ -79,8 +79,6 @@ SOFTWARE.
 ---
 
 ## Author Info
-
-- Twitter - [@jamesqquick](https://twitter.com/jamesqquick)
-- Website - [James Q Quick](https://jamesqquick.com)
+- Website - [Daniel Terry](https://danieljamesterry.com)
 
 [Back To The Top](#)
